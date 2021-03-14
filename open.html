@@ -6,7 +6,7 @@
 <body>
 <center id="e"></center>
 <script>
-var u = new URL()
+var u = new URL(window.location)
 var img = document.createElement("img")
 img.src=u.hash.substring(1)
 img.width = img.naturalWidth
