@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<title>Open Assets Image</title>
+</head>
+<body>
+<center id="e"></center>
+<script>
+var u = new URL()
+var img = document.createElement("img")
+img.src=u.hash.substring(1)
+img.width = img.naturalWidth
+img.height = img.naturalHeight
+document.getElementById("e").appendChild(img)
+</script></body></html>
