@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
 <head>
-<title>Open Assets Image</title>
+<title>Open Assets Image without download</title>
 </head>
 <body>
 <center id="e"></center>
 <script>
 var u = new URL(window.location)
 var img = document.createElement("img")
-img.src=u.hash.substring(1)
+img.src="https://assets.scratch.mit.edu/get_image/.%2E/" + u.hash.substring(1)
 img.width = img.naturalWidth
 img.height = img.naturalHeight
 document.getElementById("e").appendChild(img)
