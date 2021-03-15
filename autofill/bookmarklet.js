@@ -1,4 +1,4 @@
-// original code 
+// original code https://scratch.mit.edu/discuss/topic/489839/?page=2#post-4968917
 void(async () => { // Make sure there is no result so the page isn't overwritten
     const res = await fetch(`https://functionalmetatable.github.io/random/autofill/bookmarklet.json`, {method:"GET"})
     let json = await res.json();
