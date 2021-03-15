@@ -1,6 +1,6 @@
-// original code https://scratch.mit.edu/discuss/topic/489839/?page=2#post-4968917
+// original code 
 void(async () => { // Make sure there is no result so the page isn't overwritten
-    const res = await fetch(`https://functionalmetatable.github.io/random/quickreplyBookmarklet/bookmarklet.json`, {method:"GET"})
+    const res = await fetch(`https://functionalmetatable.github.io/random/autofill/bookmarklet.json`, {method:"GET"})
     let json = await res.json();
     let messages = Object.values(json);
     (menuItems => {
