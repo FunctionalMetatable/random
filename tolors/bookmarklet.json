@@ -48,7 +48,7 @@
     },
     "1.11": {
       "title": "“Forever if” C block",
-      "text": "This block was in the Scratch 1.4 editor, and worked the same as putting an "if" block inside the existing forever loop.  It was removed in Scratch 2.0 because many beginning Scratchers found it to be confusing.  The aforementioned workaround, evidently, is simple and more intuitive."
+      "text": "This block was in the Scratch 1.4 editor, and worked the same as putting an if block inside the existing forever loop.  It was removed in Scratch 2.0 because many beginning Scratchers found it to be confusing.  The aforementioned workaround, evidently, is simple and more intuitive."
     },
     "1.12": {
       "title": "Letters in cloud variables",
