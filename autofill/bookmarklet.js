@@ -26,7 +26,7 @@ void(async () => { // Make sure there is no result so the page isn't overwritten
         d.append(...menuItems.map(e => { // this part turns the menu items into button tags
             let b = document.createElement("button"); // first we make the button
             b.setAttribute("data-easrng-menubutton", "1"); // let the CSS see it exists without clashing with on-page styles
-            b.textContent = e.text; // make it have the right text
+            b.textContent = e.unformattedText; // make it have the right text
             b.onclick = a => { // when it is clicked
                 a.preventDefault(); // don't reload the page
                 a.stopPropagation(); // don't trigger other events
