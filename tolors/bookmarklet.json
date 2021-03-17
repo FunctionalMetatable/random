@@ -8,7 +8,7 @@
     "type": "section",
     "1.1": {
       "title": "“Broadcast received” boolean block",
-      "text": "This would allow a project to detect when a broadcast is sent.  But, there is a lot of ambiguity on how this would work.  Would it return true if the broadcast was fired since the project was created, since the green flag was clicked, or since something else was broadcasted?  The workaround is simple: use variables that change when a broadcast is received, then use the “equals” block.",
+      "text": "This would allow a project to detect when a broadcast is sent.  But, there is a lot of ambiguity on how this would work.  Would it return true if the broadcast was fired since the project was created, since the green flag was clicked, or since something else was broadcasted?  The workaround is simple: use variables that change when a broadcast is received, then use the “equals” block."
     },
     "1.2": {
       "title": "“When stop sign clicked” hat block",
