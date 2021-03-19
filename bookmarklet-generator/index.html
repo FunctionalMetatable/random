@@ -6,7 +6,7 @@
   <body>
     <a>Bookmarklet</a>
     <script>
-      var e=new URL(window.location);document.getElementById("r").href = e.hash.substring(1);
+      var e=new URL(window.location);document.getElementById("r").href = `javascript: ${e.hash.substring(1)}`;
     </script>
   </body>
 </html>
