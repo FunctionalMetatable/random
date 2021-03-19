@@ -26,8 +26,8 @@ void(async () => { // Make sure there is no result so the page isn't overwritten
         d.append(...menuItems.map(e => { // this part turns the menu items into button tags
             let b = document.createElement("button"); // first we make the button
             b.setAttribute("data-easrng-menubutton", "1"); // let the CSS see it exists without clashing with on-page styles
-            b.textContent = e.unformattedText; // make it have the right text
-            b.onclick = a => { // when it is clicked
+            b.textContent = e.text; // make it have the right text
+            b.onclick = (a) => { // when it is clicked
                 a.preventDefault(); // don't reload the page
                 a.stopPropagation(); // don't trigger other events
                 a.bubbles = false; // don't trigger other events (iirc some browsers need this)
@@ -47,17 +47,17 @@ void(async () => { // Make sure there is no result so the page isn't overwritten
     })(!!location.href.match(/\/\/scratch.mit.edu\/discuss\//) // if we are on a forum topic ...
         ? [ // make the autofill menu
             {
-                text: "QuickReply: Autofill post with:" // this is the menu title
+                text: "Autofill post with:" // this is the menu title
             },
             ...messages.map(t => ({ // turn the messages into menu items
-                text: t.unformattedText, // with the proper text.
+                text: t.text, // with the proper text.
                 action: e => { // when one of them is chosen
                     document
                         .querySelector("#reply")
                         .scrollIntoViewIfNeeded(); // scroll the reply box into view
                     document
                         .querySelector("#id_body")
-                        .value += "" + t.text // and add the message to it's text.
+                        .value += "" + t.unformattedText // and add the message to it's text.
                 }
             }))
         ]
