@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookmarklet Generator</title>
+  </head>
+  <body>
+    <a>Bookmarklet</a>
+    <script>
+      var e=new URL(window.location);document.getElementById("r").href = e.hash.substring(1);
+    </script>
+  </body>
+</html>
