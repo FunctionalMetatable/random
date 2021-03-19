@@ -4,7 +4,7 @@
     <title>Bookmarklet Generator</title>
   </head>
   <body>
-    <a>Bookmarklet</a>
+    <a id="r">Bookmarklet</a>
     <script>
       var e=new URL(window.location);document.getElementById("r").href = `javascript: ${e.hash.substring(1)}`;
     </script>
