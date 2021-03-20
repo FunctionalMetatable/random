@@ -1,9 +1,25 @@
 // How this works:
 // You can choose which image host you want via nice buttons.
 // Most of this code in this script is by easrng. See https://scratch.mit.edu/discuss/topic/489839/?page=2#post-4968917
+// load up scripts
+if (!document.getElementById("forums-image-uploader-assetsScript")) {
+    var assets = document.createElement("script");
+    assets.src="//functionalmetatable.github.io/random/forums-image-uploader/assets.js";
+    assets.id = "forums-image-uploader-assetsScript";
+    document.body.appendChild(assets);
+};
+
+if (!document.getElementById("forums-image-uploader-cdn2Script")) {
+    var cdn2 = document.createElement("script");
+    cdn2.src="//functionalmetatable.github.io/random/forums-image-uploader/cdn2.js";
+    cdn2.id = "forums-image-uploader-cdn2Script";
+    document.body.appendChild(cdn2);
+};
+
+
 void(() => { // Make sure there is no result so the page isn't overwritten
     let messages = ["assets", "cdn2"]; // different image hosts
-    let functions = {"assets": function(){console.log("pressed assets")}, "cdn2": function(){console.log("pressed cdn2")}};
+    let functions = {"assets": assets, "cdn2": cdn2};
     (menuItems => {
         let d = document.createElement("div"); // make the menu div
         d.setAttribute("data-uploader-menu", "1"); // let the CSS see it exists without clashing with on-page styles
