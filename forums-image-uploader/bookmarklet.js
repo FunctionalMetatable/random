@@ -1,11 +1,11 @@
-// load deps
+/* load deps */
 if (!document.getElementById("jquery")) {
   var s = document.createElement("script")
   s.src = "https://code.jquery.com/jquery-3.6.0.min.js";
   s.id = "jquery";
   document.body.appendChild(s);
 }
-// Credit to @jeffalo for the original code
+/* Credit to @jeffalo for the original code */
 var input = document.createElement("input");
 input.type = "file";
 input.accept = "image/*";
@@ -78,7 +78,7 @@ async function upload(img) {
   }).then(data => {
     console.log("Created Project!");
     console.log(data);
-    // Set the Title for project
+    /* Set the Title for project */
     fetch(`https://api.scratch.mit.edu/projects/${data["content-name"]}`, {
       "headers": {
         "accept": "application/json",
