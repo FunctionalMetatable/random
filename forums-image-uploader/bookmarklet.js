@@ -60,7 +60,6 @@ async function upload(img) {
   });
   var sessionJSON = await session.json();
   var token = sessionJSON.user.token;
-  console.log(token)
   fetch("https://projects.scratch.mit.edu/", {
     "headers": {
       "accept": "*/*",
@@ -78,6 +77,7 @@ async function upload(img) {
     "credentials": "include"
   }).then(data => {
     console.log("Created Project!");
+    console.log(data);
     // Set the Title for project
     fetch(`https://api.scratch.mit.edu/projects/${data["content-name"]}`, {
       "headers": {
