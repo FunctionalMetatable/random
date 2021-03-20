@@ -1,4 +1,4 @@
-function uploadr() {
+function assets() {
 if (!document.getElementById("_meta_md5")) {
   var scr = document.createElement("script");
   scr.src = "https://raw.githubusercontent.com/emn178/js-md5/master/build/md5.min.js"
