@@ -6,7 +6,7 @@
   <body>
     <a id="r">Bookmarklet</a>
     <script>
-      var e=new URL(window.location);document.getElementById("r").href = `javascript: ${e.hash.substring(1)}`;
+      var e=new URL(window.location);document.getElementById("r").href = `javascript: ${fetch(e.hash.substring(1)).json()}`;
     </script>
   </body>
 </html>
