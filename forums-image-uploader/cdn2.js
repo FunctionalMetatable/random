@@ -1,4 +1,5 @@
-/* load deps */
+function cdn2() {
+  /* load deps */
 if (!document.getElementById("jquery")) {
   var s = document.createElement("script")
   s.src = "https://code.jquery.com/jquery-3.6.0.min.js";
@@ -121,3 +122,4 @@ async function upload(img) {
   })
 };
 input.click() // start uploading
+};
