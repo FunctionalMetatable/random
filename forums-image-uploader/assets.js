@@ -48,4 +48,3 @@ input.addEventListener("change", (e) => {
   };
 })
 }
-uploadr();
