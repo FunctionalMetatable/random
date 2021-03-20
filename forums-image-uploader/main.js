@@ -19,7 +19,7 @@ if (!document.getElementById("forums-image-uploader-cdn2Script")) {
 
 void(() => { // Make sure there is no result so the page isn't overwritten
     let messages = ["assets", "cdn2"]; // different image hosts
-    let functions = {"assets": assets, "cdn2": cdn2};
+    var functions = {"assets": assets, "cdn2": cdn2};
     (menuItems => {
         let d = document.createElement("div"); // make the menu div
         d.setAttribute("data-uploader-menu", "1"); // let the CSS see it exists without clashing with on-page styles
@@ -75,7 +75,7 @@ void(() => { // Make sure there is no result so the page isn't overwritten
         ]
         : [
             {
-                text: "u broke the script"
+                text: "For some reason it doesn't work :("
             }
         ]);
 })()
