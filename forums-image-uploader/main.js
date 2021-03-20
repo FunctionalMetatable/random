@@ -61,22 +61,21 @@ void(() => { // Make sure there is no result so the page isn't overwritten
         document
             .body
             .append(b, d); // add the menu and the thing that goes behind it to the document
-    })(!!location.href.match(/\/\/scratch.mit.edu\/discuss\/topic\//) // if we are on a forum topic ...
+    })(true
         ? [
             {
                 text: "Which image host would you like to use?" // this is the menu title
             },
-            ...messages.map(t => ({ // turn the messages into menu items
-                text: t, // with the proper text.
-                action: e => { // when one of them is chosen
-                    // start function
+            ...messages.map(t => ({
+                text: t,
+                action: e => {
                   functions[t]();
                 }
             }))
         ]
-        : [ // if we aren't on a forum topic, tell the user.
+        : [
             {
-                text: "Please use this bookmarklet on a forum topic."
+                text: "u broke the script"
             }
         ]);
 })()
