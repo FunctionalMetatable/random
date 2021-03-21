@@ -15,16 +15,20 @@
     "text": "Template:Move2QAS",
     "unformattedText": "Please post these types of questions in the [url=https://scratch.mit.edu/discuss/4/]Questions about Scratch forum.[/url]"
   },
-  "4": {
+  "5": {
     "text": "Template:PlatformerTutorials",
     "unformattedText": "You may want to try using [url=https://www.youtube.com/playlist?list=PLy4zsTUHwGJIqB6hg-sOxiwsJn7UfuCLw]@griffpatch's scrolling platformer tutorials[/url]"
   },
-  "4": {
+  "6": {
     "text": "Template:MoveToHWS",
     "unformattedText": "Hi - It looks like you have post this in the wrong forum. In the future - please post these types of questions in the [url=https://scratch.mit.edu/discuss/7/]Help with Scripts forum.[/url]"
   },
-  "5": {
+  "7": {
     "text": "Template:FrontPageCurator",
     "unformattedText": "If you're looking to curate the front page (an FPC), here's a [url=https://scratch.mit.edu/studios/386359/]link[/url]! If you want your projects to be curated, you just have to be lucky ;)"
+  },
+  "8": {
+    "text": "Template:UserST",
+    "unformattedText": "Being a Scratch Team member is a full-time working [url=https://www.scratchfoundation.org/opportunities/]job[/url] for adults."
   }
 }
