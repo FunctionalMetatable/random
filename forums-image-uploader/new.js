@@ -7,6 +7,7 @@ function loadDependencies() {
     var md5s = document.createElement("script");
     md5s.src = "https://raw.githubusercontent.com/emn178/js-md5/master/build/md5.min.js";
     md5s.id = "imguploader-md5";
+    md5s.type = "text/javascript";
     document.body.appendChild(md5s)
   };
   /* jquery.min.js */
@@ -14,6 +15,7 @@ function loadDependencies() {
     var jquerys = document.createElement("script");
     jquerys.src = "https://code.jquery.com/jquery-3.6.0.min.js";
     jquerys.id = "imguploader-jquery";
+    jquerys.type = "text/javascript";
     document.body.appendChild(jquerys)
   }; 
 };
@@ -75,7 +77,7 @@ async function uploadToCDN2(image, extension) {
         })
     }
 
-    function upload(img) {
+    async function upload(img) {
         var session = await fetch("https://scratch.mit.edu/session/", {
             credentials: "same-origin",
             headers: {
@@ -176,4 +178,6 @@ function finish(url) {
 
 
 
-
+function uploadViaURL(url) {
+  
+}
