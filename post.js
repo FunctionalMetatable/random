@@ -33,5 +33,8 @@ async function upload(imageBlob) {
     },
     contentType: "",
     processData: false,
+    success: (e) => {
+      console.log("Success on uploading image :D")
+    }
   })
 }
