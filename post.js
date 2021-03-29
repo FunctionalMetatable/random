@@ -8,7 +8,7 @@ if (!document.getElementById("jquery")) {
 // We need to:
 // Create an image => Copy the image => Paste the image as a blob => upload it to project
 var toUpload =
-  "https://github-readme-stats.vercel.app/api?username=FunctionalMetatable&theme=radical";
+  "https://readme-server.vercel.app/api?username=FunctionalMetatable&theme=radical";
 fetch(toUpload)
 .catch(err => {
   console.log("We cannot find the image from " + toUpload + ", we got an error: " + err)
