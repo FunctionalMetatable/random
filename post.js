@@ -12,9 +12,8 @@ async function getImage(user) {
   var res = await d.json()
   if (true) {
     // Get the SVG image
-    var di = await fetch("https://NodeJS-badges.9gr.repl.co/forum%20posts/" + (res.counts.total.count || "0") + "/brightgreen/image.svg")
-    var blob = await di.blob();
-    return blob
+    console.log("User posts: " + res.counts.total.count)
+    return ("https://NodeJS-badges.9gr.repl.co/forum%20posts/" + (res.counts.total.count || "0") + "/brightgreen/image.svg")
   }
 }
 fetch(getImage("9gr"))
@@ -34,7 +33,7 @@ async function upload(imageBlob) {
   };
   $.ajax({
     type: "POST",
-    url: "/internalapi/project/thumbnail/" + projectId + "/set/",
+    url: "https://scratch.mit.edu/internalapi/project/thumbnail/" + projectId + "/set/",
     data: imageBlob,
     headers: {
       "X-csrftoken": getCookie("scratchcsrftoken")
