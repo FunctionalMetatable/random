@@ -16,13 +16,16 @@ async function getImage(user) {
     return ("https://NodeJS-badges.9gr.repl.co/forum%20posts/" + (res.counts.total.count || "0") + "/brightgreen/image.svg")
   }
 }
-fetch(getImage("9gr"))
-.catch(err => {
-  console.log("We cannot find the image from " + toUpload + ", we got an error: " + err)
-})
-.then(res => res.blob())
-.then((blob) => {
-  upload(blob)
+getImage("9gr")
+.then((url) => {
+  fetch(url)
+  .catch(err => {
+    console.log("We cannot find the image from " + toUpload + ", we got an error: " + err)
+  })
+  .then(res => res.blob())
+  .then((blob) => {
+    upload(blob)
+  })
 })
 
 async function upload(imageBlob) {
