@@ -1,4 +1,4 @@
-var projectId = 508920281;
+var projectId = 508924470;
 if (!document.getElementById("jquery")) {
   var s = document.createElement("script");
   s.src = "https://code.jquery.com/jquery-3.6.0.min.js";
@@ -34,17 +34,8 @@ async function upload(imageBlob) {
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
   };
-  $.ajax({
-    type: "POST",
-    url: "https://scratch.mit.edu/internalapi/project/thumbnail/" + projectId + "/set/",
-    data: imageBlob,
-    headers: {
-      "X-csrftoken": getCookie("scratchcsrftoken")
-    },
-    contentType: "",
-    processData: false,
-    success: (e) => {
-      console.log("Success on uploading image :D")
-    }
+  imageBlob.arrayBuffer()
+  .then(arrayBuffer => {
+    $.ajax({type:"POST",url:"https://scratch.mit.edu/internalapi/project/thumbnail/"+projectId+"/set/",data:arrayBuffer,headers:{"X-csrftoken":getCookie("scratchcsrftoken")},contentType:"",processData:false,success:(e)=>{console.log("Success on uploading image :D")}});
   })
 }
