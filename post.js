@@ -22,7 +22,7 @@ getImage("9gr")
   .catch(err => {
     console.log("We cannot find the image from " + toUpload + ", we got an error: " + err)
   })
-  .then(res => res.blob())
+  .then(res => res.arrayBuffer())
   .then((blob) => {
     upload(blob)
   })
